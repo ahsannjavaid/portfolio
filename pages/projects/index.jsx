@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import styles from "@/styles/index.module.css";
 import { motion } from "framer-motion";
 import ProjectCard from "@/components/ProjectCard";
-// import allProjects from "@/data/projectData/index.json";
+import allProjects from "@/data/projectData/index.json";
 import HomeOutlinedIcon from "@mui/icons-material/HomeRounded";
 import Link from "next/link";
 import Meta from "@/components/Meta";
-import useAxios from "@/hooks/useAxios";
+// import useAxios from "@/hooks/useAxios";
 import Loader from "@/components/Loaders/Loader";
 import Idea from "@/components/Logo/Idea";
 
@@ -14,20 +14,23 @@ function Home() {
     const [projects, setProjects] = useState([]);
     const [loading, setLoading] = useState(false);
 
-    const projectData = useAxios({
-        method: "get",
-        url: "/api/getProjects",
-        headers: JSON.stringify({ accept: "*/*" }),
-    });
+    // const projectData = useAxios({
+    //     method: "get",
+    //     url: "/api/getProjects",
+    //     headers: JSON.stringify({ accept: "*/*" }),
+    // });
 
     useEffect(() => {
         setTitle();
         setLoading(true);
-        if (projectData.response !== null) {
-            setProjects(projectData.response);
-            setLoading(false);
-        }
-    }, [projectData]);
+        // if (projectData.response !== null) {
+        //     setProjects(projectData.response);
+        //     setLoading(false);
+        // }
+        getAllProjects();
+        setLoading(false);
+    // }, [projectData]);
+    }, []);
 
     const setTitle = () => {
         document.title = "Projects | armaancodes.com";
@@ -35,18 +38,18 @@ function Home() {
 
     // ----------------- IF READING PROJECTS FROM FILE --------------------------
 
-    // const getAllProjects = () => {
-    //     setProjects(allProjects.map((project) => project));
-    // };
+    const getAllProjects = () => {
+        setProjects(allProjects.map((project) => project));
+    };
 
     // ----------------- IF READING PROJECTS FROM FILE --------------------------
 
     return (
         <>
             <Meta
-                title={"Projects | armaancodes.com"}
-                seoTitle={"Projects | armaancodes.com"}
-                seoURL={"https://www.armaancodes.com/projects"}
+                title={"Projects | ahsanjaved.netlify.app"}
+                seoTitle={"Projects | ahsanjaved.netlify.app"}
+                seoURL={"https://www.ahsanjaved.netlify.app/projects"}
             />
             <div className="bg-[#08001A] min-h-screen pt-10">
                 <div className={styles.container}>

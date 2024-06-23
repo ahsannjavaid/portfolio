@@ -4,6 +4,7 @@
         "title": "Age Calculator",
         "slug": "age-calculator",
         "type": "Mobile/Android",
+        "overview": "",
         "timeline": {
             "startDate": "5 October 2022",
             "endDate": "6 October 2022"
@@ -32,6 +33,7 @@
         "title": "Connect",
         "slug": "connect",
         "type": "Web application",
+        "overview": "",
         "timeline": {
             "startDate": "26 September 2022",
             "endDate": "27 September 2022"
@@ -69,6 +71,7 @@
         "title": "MyInventory",
         "slug": "myinventory",
         "type": "Web application",
+        "overview": "",
         "timeline": {
             "startDate": "September 2022",
             "endDate": "August 2023"
@@ -127,6 +130,7 @@
         "title": "Portfolio",
         "slug": "portfolio",
         "type": "Website",
+        "overview": "",
         "timeline": {
             "startDate": "06 April 2023",
             "endDate": "13 April 2023"
@@ -163,6 +167,7 @@
         "title": "Quizee",
         "slug": "Quizee",
         "type": "Mobile/Android",
+        "overview": "",
         "timeline": {
             "startDate": "27 May 2023",
             "endDate": false
@@ -203,6 +208,7 @@
         "title": "WeDD",
         "slug": "wedd",
         "type": "Web application",
+        "overview": "",
         "timeline": {
             "startDate": "28 October 2022",
             "endDate": "16 December 2022"

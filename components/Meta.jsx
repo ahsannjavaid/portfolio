@@ -1,14 +1,14 @@
 import Head from "next/head";
 
 function Meta({
-    title = "Armaan Jaj | Software Developer",
-    keywords = "web dev, web development, web development articles, web development blogs, web development portfolio, portfolio website",
-    description = "Armaan Singh Jaj is a Full stack web developer and designer who specializes in building exceptional digital experiences and this particular portfolio project is designed and built by Armaan Jaj.",
-    seoTitle = "Armaan Jaj | Software Developer",
-    seoDescription = "Armaan Singh Jaj is a Full stack web developer and designer who specializes in building exceptional digital experiences and this particular portfolio project is designed and built by Armaan Jaj.",
-    seoURL = "https://www.armaancodes.com/",
-    seoImage = "https://user-images.githubusercontent.com/113659942/231727880-4a93c014-a9a6-4071-9920-c7b66ba4ab9a.png",
-    twitterCreator = "armaanjaj",
+    title = "Ahsan Javed | Software Engineer",
+    keywords = "web dev, web development, web development portfolio, portfolio website, ios development, android development",
+    description = "Ahsan Javed is a skillful Software Engineer capable of designing, developing, and implementing high-performance applications. Proficient in SDLC methodologies with a strong foundation in algorithms and data structures. Effective collaborator known for problem-solving, attention to detail, and commitment to continuous learning. Aiming to handle diverse nature of projects.",
+    seoTitle = "Ahsan Javed | Software Engineer",
+    seoDescription = "Ahsan Javed is a skillful Software Engineer capable of designing, developing, and implementing high-performance applications. Proficient in SDLC methodologies with a strong foundation in algorithms and data structures. Effective collaborator known for problem-solving, attention to detail, and commitment to continuous learning. Aiming to handle diverse nature of projects.",
+    seoURL = "https://www.ahsanjaved.netlify.app/",
+    seoImage = "https://1drv.ms/i/s!AjAeJR8zLLGzkS7ThPCx5QvRsiLi?e=c367o5",
+    twitterCreator = "ahsannjavaid",
     theme = "#08001A"
 }) {
     return (
@@ -39,8 +39,8 @@ function Meta({
             />
 
             <meta charSet="utf-8" />
-            <link rel="canonical" href="https://www.armaancodes.com/" />
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="canonical" href="https://www.ahsanjaved.netlify.app/" />
+            <link rel="icon" href="/icon_0.0.png" />
             <title>{title}</title>
         </Head>
     );

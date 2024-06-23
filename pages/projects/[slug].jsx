@@ -10,33 +10,61 @@ import Link from "next/link";
 import Meta from "@/components/Meta";
 import HomeOutlinedIcon from "@mui/icons-material/HomeRounded";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import useAxios from "@/hooks/useAxios";
+// import useAxios from "@/hooks/useAxios";
 import LoaderFS from "@/components/Loaders/Loader-FS";
 import Idea from "@/components/Logo/Idea";
+import connect from "@/data/projectData/projects/connect.json";
+import ageCalculator from "@/data/projectData/projects/age-calculator.json";
+import myInventory from "@/data/projectData/projects/myinventory.json";
+import portfolio from "@/data/projectData/projects/portfolio.json";
+import wedd from "@/data/projectData/projects/wedd.json";
 
 function SlugPage() {
     const router = useRouter();
     const [projectDetails, setProjectDetails] = useState([]);
-    const [slug, setSlug] = useState("");
+    // const [slug, setSlug] = useState("");
     const [loading, setLoading] = useState(false);
 
-    const projectData = useAxios({
-        method: "get",
-        url: `/api/getProject?slug=${slug}`,
-        headers: JSON.stringify({ accept: "*/*" }),
-    });
+    // const projectData = useAxios({
+    //     method: "get",
+    //     url: `/api/getProject?slug=${slug}`,
+    //     headers: JSON.stringify({ accept: "*/*" }),
+    // });
 
     useEffect(() => {
         if (!router.isReady) return;
 
         setLoading(true);
-        setSlug(router.query.slug);
+        // setSlug(router.query.slug);
 
-        if (projectData.response !== null) {
-            setProjectDetails(projectData.response);
-            setLoading(false);
+        switch (router.query.slug) {
+            case "Connect":
+                setProjectDetails(connect);
+                break;
+            case "age-in-minutes":
+                setProjectDetails(ageCalculator);
+                break;
+            case "myinventory":
+                setProjectDetails(myInventory);
+                break;
+            case "portfolio_v2":
+                setProjectDetails(portfolio);
+                break;
+            case "we-dd-mern":
+                setProjectDetails(wedd);
+                break;
+            default:
+                break;
         }
-    }, [router.isReady, router.query, projectData]);
+
+        // if (projectData.response !== null) {
+        //     setProjectDetails(projectData.response);
+        //     setLoading(false);
+        // }
+
+        setLoading(false);
+    // }, [router.isReady, router.query, projectData]);
+    }, [router.isReady, router.query]);
 
     return (
         <>
@@ -51,10 +79,10 @@ function SlugPage() {
                         ? projectDetails.title + " | Projects"
                         : "Projects"
                 }
-                description="Check out all web or mobile application projects on armaancodes.com."
-                seoDescription="Check out all web or mobile application projects on armaancodes.com."
+                description="Check out all web or mobile application projects on ahsanjaved.netlify.app."
+                seoDescription="Check out all web or mobile application projects on ahsanjaved.netlify.app."
                 seoURL={
-                    "https://www.armaancodes.com/projects" +
+                    "https://www.ahsanjaved.netlify.app/projects" +
                     `/${projectDetails.title}`
                 }
             />
